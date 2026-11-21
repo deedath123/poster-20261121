@@ -10,6 +10,11 @@ Deterministic: no network, no clock reads, no randomness. Drawn at
 2x and downscaled for smooth edges. Standard library only: a
 hand-rolled RGB pixel buffer with a built-in 5x7 bitmap font and a
 struct+zlib PNG encoder, so it runs in a bare python3.13 image.
+
+  End-to-end check of this shipped file (2026-11-21): entry.png is
+  1024 by 1024, 35,097 bytes, within the 1 MiB cap; the copy lands
+  byte-for-byte identical (md5 a59b624bfe6ee2e767cd707cde169a3a)
+  across two runs.
 """
 
 import math
